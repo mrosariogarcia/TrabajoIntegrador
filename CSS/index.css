@@ -9,25 +9,26 @@ header{
     height: 400px;
     display: flex;
     align-items: flex-start;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .logo{
-    justify-content: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     align-items: flex-start;
-    width: 200px;
-
-    
+    width: 175px;
+    margin: 10px;
 }
 
 h1{
     color:#F7D69D;
     font-family: 'Open Sans', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Staatliches', cursive;
-font-family: 'Work Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Staatliches', cursive;
+    font-family: 'Work Sans', sans-serif;
     font-size:100px;
-    font-weight: bold;
+    font-weight: bolder;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -67,6 +68,31 @@ li{
     border-radius: 30px;
 }
 
+form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(32,50,103);
+    color: white;
+    margin: 0px;
+    padding: 20px;
+}
+
+input{
+    font-family: Geneva, Tahoma, sans-serif;
+    color: white;
+    background-color: rgb(90, 87, 136);
+    border: 3px solid rgb(90, 87, 136);
+    margin: 5px;
+    
+}
+
+::placeholder{
+    color: white;
+}
+
 h2{
     display: flex;
     flex-wrap: wrap;
@@ -92,4 +118,8 @@ section{
 img{
     max-width: 500px;
     max-height: 400px;
+}
+
+footer{
+    
 }
