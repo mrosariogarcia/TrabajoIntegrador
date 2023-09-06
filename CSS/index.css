@@ -5,13 +5,27 @@ body{
 }
 
 header{
-    background-image: url(/IMG/BACKGROUND.png);
+    background-image: url(../IMG/background.png);
     height: 400px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.logo{
+    justify-content: left;
+    align-items: flex-start;
+    width: 200px;
+
+    
 }
 
 h1{
-    color: white;
-    font-family: fantasy;
+    color:#F7D69D;
+    font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Staatliches', cursive;
+font-family: 'Work Sans', sans-serif;
     font-size:100px;
     font-weight: bold;
     display: flex;
