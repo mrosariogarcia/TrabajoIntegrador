@@ -115,9 +115,16 @@ section{
     color: white;
 }
 
+article {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
 img{
-    max-width: 500px;
-    max-height: 400px;
+    max-width: 300px;
+    max-height: 350px;
+    justify-content: space-around;
 }
 
 footer{
