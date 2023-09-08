@@ -1,0 +1,100 @@
+*{ box-sizing: border-box;}
+
+body{
+    background-color: rgb(32,50,103);
+}
+
+header{
+    background-image: url(../IMG/background.png);
+    height: 400px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 175px;
+    margin: 10px;
+}
+
+h1{
+    color:#F7D69D;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Staatliches', cursive;
+    font-family: 'Work Sans', sans-serif;
+    font-size:100px;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 30px;
+}
+
+a:link{
+    text-decoration: none;
+    color:#F7D69D;
+}
+
+a:visited{
+    text-decoration: none;
+    color:#F7D69D;
+}
+
+ul{
+    list-style: none;
+    padding: 0px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    background-color: rgb(162,83,123);
+    margin: 0px;
+
+    flex-direction: column;
+}
+
+li{
+    font-size: medium;
+    border: 10px solid rgb(90, 87, 136);
+    background-color: rgb(90, 87, 136);
+    color: rgb(32,50,103);
+    justify-content: center;
+    margin: 15px;
+    width: 700px;
+    padding: 0px 200px;
+}
+
+h3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+    margin: 0px;
+    padding: 20px;
+}
+
+footer{
+    height: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+h4{
+    margin: 20px 30px;
+}

@@ -1,0 +1,103 @@
+*{ box-sizing: border-box;}
+
+body{
+    background-color: rgb(32,50,103);
+}
+
+header{
+    background-image: url(../IMG/background.png);
+    height: 400px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 175px;
+    margin: 10px;
+}
+
+h1{
+    color:#F7D69D;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Staatliches', cursive;
+    font-family: 'Work Sans', sans-serif;
+    font-size:100px;
+    font-weight: bolder;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 30px;
+}
+
+h3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+    margin: 0px;
+    padding: 20px;
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(162,83,123);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(90, 87, 136);
+    width: 500px;
+    margin: 20px;
+    padding: 10px;
+
+}
+
+h4{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin: 5px
+}
+
+p{
+    font-size: small;
+}
+
+footer{
+
+    height: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+h4{
+    margin: 20px 30px;
+}
+
