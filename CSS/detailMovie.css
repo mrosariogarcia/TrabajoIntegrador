@@ -2,12 +2,53 @@
 
 body {
     background-color: rgb(32,50,103);
-
 }
 
-.contenedorPadre{
-    color:violet;
+img {
+    width: 100%;
 }
-.rating{
-    background-color: black;
+
+.contenedorPadre {
+    background-color: rgb(162,83,123);
+    padding-bottom: 20px;
+}
+
+h2 {
+    justify-content: center;
+}
+
+div {
+    flex-direction: row; 
+    flex-wrap: wrap;
+    display: flex;
+}
+
+article {
+    flex-direction: column;
+}
+
+.icons {
+    width: 40px;
+}
+
+.subSection {
+    background-color: #F7D69D;
+    margin: 40px 100px;
+    
+}
+
+.box1 {
+    border: 2px solid grey;
+    max-width: 50%;
+}
+
+.box2 {
+    border: 2px solid grey;
+    max-width: 50%;
+    flex-direction: column;
+    justify-content: ;
+}
+
+.film {
+    border: 2px solid grey;
 }

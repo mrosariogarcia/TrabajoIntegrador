@@ -102,7 +102,7 @@ h2{
     background-color: rgb(162,83,123);
     color: white;
     margin: 0px;
-    padding: 20px;
+    padding-top: 20px;
 }
 
 section{
@@ -113,6 +113,8 @@ section{
     align-items: center;
     background-color: rgb(162,83,123);
     color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 article {
@@ -140,7 +142,7 @@ h6{
 
 img{
     max-width: 300px;
-    max-height: 350px;
+    max-height: 300px;
     justify-content: space-around;
 }
 
