@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,51 +8,80 @@
     <link href="./CSS/detailMovie.css" rel="stylesheet">
 
 </head>
+
 <body>
     <header>
-
+        
+        <a href="index.html">
+            <img class="logo" src="./IMG/hollywoodShines.png">
+        </a>
+            
+            <h1>HOLLYWOOD SHINES</h1>
+            
     </header>
-    
+
+    <h3> DETALLES de PELICULA </h3>
+
     <main class="contenedorPadre">
 
-        <img src="./IMG/Detalle peliculas/IndianaJonesTopImage.png">
-        
+        <img src="./IMG/Detalle peliculas/the_crowded_room-largo.jpg">
+
         <section class="subSection">
-            <div class="box1">
-                <article>
-                <img class="icons" src="./IMG/Detalle peliculas/tomateRT.png">
-                <p class="rating">69%</p>
-                </article>
             
-                <article>
-                <img class="icons" src="./IMG/Detalle peliculas/tomateRT.png">
-                <p class="rating">88%</p>
-                </article>
-            </div>
-            
-            <div class="box2">
-                <p class="estreno">29 de junio de 2023</p>
-                <p class="duracion">2h 22m</p>
-            </div>
-               
             <div class="film">
-                <h2>Indiana Jones and the Dial of Destiny</h2>
-                <p class="sinopsis">En 1969, un Indiana Jones envejecido 
-                    y derrotado por la vida regresa a la acción para evitar 
-                    que la hija de uno de sus amigos venda un artilugio que 
-                    permite viajar en el tiempo a unos nazis que pretenden 
+                <p class="tituloFilm">Indiana Jones and the Dial of Destiny</p>
+                <p>En 1969, un Indiana Jones envejecido
+                    y derrotado por la vida regresa a la acción para evitar
+                    que la hija de uno de sus amigos venda un artilugio que
+                    permite viajar en el tiempo a unos nazis que pretenden
                     alterar el curso de la Segunda Guerra Mundial.</p>
             </div>
 
-            <p class="generos">Acción</p>
-            <p class="generos">Aventura</p>
-            <p class="generos">Ciencia Ficción</p>
-        </section>    
+            <div class="row">
+                <div class="box1">
+                    <article>
+                        <img class="icons" src="./IMG/Detalle peliculas/tomateRT.png">
+                        <p class="rating">69%</p>
+                    </article>
 
-            
-        
+                    <article>
+                        <img class="icons" src="./IMG/Detalle peliculas/tomateRT.png">
+                        <p class="rating">88%</p>
+                    </article>
+                </div>
+
+                <div class="box2">
+                    <div class="row1">
+                    <p class="subTitulo">Estreno:</p>
+                    <p>29 de junio de 2023</p>
+                    </div>
+                    <div class="row1">
+                    <p class="subTitulo">Duración:</p>
+                    <p>2h 22m</p>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="generosPelicula">
+                <ul>
+                    <li><a href="genres.html">Acción</a></li>
+                    <li><a href="genres.html">Aventura</a></li>
+                    <li><a href="genres.html">Ciencia Ficción</a></li>
+                </ul>
+            </nav>
+
+        </section>
+
     </main>
 
+    <footer>
+
+        <h4> Trinidad Fontan Balestra </h4>
+        <h4> Maria Rosario Garcia </h4>
+        <h4> Felicitas Quiroga </h4>
+
+    </footer>
 
 </body>
+
 </html>
