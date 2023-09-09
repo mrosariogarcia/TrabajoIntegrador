@@ -126,6 +126,11 @@ article {
     margin: 0px 5px;
 }
 
+.estrella {
+    flex-direction: row;
+}
+
+
 h5{
     color: rgb(162,83,123);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
