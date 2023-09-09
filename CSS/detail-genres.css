@@ -51,15 +51,32 @@ h3{
 section{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: rgb(162,83,123);
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
-article {
+.generoarticulos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: ;
+    border: 10px solid #F7D69D;
+    background-color: #F7D69D;
+    margin: 0px;
+}
+
+img{
+    max-width: 300px;
+    max-height: 300px;
+    justify-content: space-around;
+    margin: 10px 10px;
+}
+
+.generotitulos{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -69,25 +86,24 @@ article {
     width: 500px;
     margin: 20px;
     padding: 10px;
-
-}
-
-h4{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
-    margin: 5px
+    font-size: large;
 }
 
 p{
     font-size: small;
+    text-align: center;
+    width: 900px;
+    font-style: italic;
+    font-size: medium;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 footer{
-
     height: 50px;
     display: flex;
     align-items: flex-start;
@@ -97,7 +113,16 @@ footer{
     font-weight: bold;
 }
 
-h4{
-    margin: 20px 30px;
+footer{
+    height: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
 }
 
+.nombres{
+    margin: 20px 30px;
+}
