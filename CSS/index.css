@@ -4,6 +4,8 @@ body{
     background-color: rgb(32,50,103);
 }
 
+/* HEADER */
+
 header{
     background-image: url(../IMG/background.png);
     height: 400px;
@@ -23,18 +25,16 @@ header{
 
 h1{
     color:#F7D69D;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Raleway', sans-serif;
-    font-family: 'Staatliches', cursive;
-    font-family: 'Work Sans', sans-serif;
-    font-size:100px;
-    font-weight: bolder;
+    font-family: 'Teko', sans-serif;
+    font-size: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
     margin: 30px;
 }
+
+/* NAVEGACIÓN PRINCIPAL */
 
 ul{
     list-style: none;
@@ -93,6 +93,8 @@ input{
     color: white;
 }
 
+/* MAIN */
+
 h2{
     display: flex;
     flex-wrap: wrap;
@@ -124,6 +126,8 @@ article {
     border: 10px solid #F7D69D;
     background-color: #F7D69D;
     margin: 0px 5px;
+    max-width: 220px;
+    height: 450px;
 }
 
 h5{
@@ -145,6 +149,15 @@ img{
     max-height: 300px;
     justify-content: space-around;
 }
+
+.favorite {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50px;
+    margin: 0px;
+}
+
+/* FOOTER */
 
 footer{
     height: 50px;
