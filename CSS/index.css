@@ -1,10 +1,10 @@
-*{ box-sizing: border-box;}
+*{ 
+    box-sizing: border-box;
+}
 
 body{
     background-color: rgb(32,50,103);
 }
-
-/* HEADER */
 
 header{
     background-image: url(../IMG/background.png);
@@ -33,8 +33,6 @@ h1{
     align-items: center;
     margin: 30px;
 }
-
-/* NAVEGACIÓN PRINCIPAL */
 
 ul{
     list-style: none;
@@ -85,15 +83,12 @@ input{
     color: white;
     background-color: rgb(90, 87, 136);
     border: 3px solid rgb(90, 87, 136);
-    margin: 5px;
-    
+    margin: 5px;    
 }
 
 ::placeholder{
     color: white;
 }
-
-/* MAIN */
 
 h2{
     display: flex;
@@ -119,33 +114,64 @@ section{
     padding-top: 20px;
 }
 
-article {    
+article {
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     border: 10px solid #F7D69D;
     background-color: #F7D69D;
     margin: 0px 5px;
     max-width: 220px;
-    height: 450px;
+    
 }
 
-article img{
+.peliFoto{
+    max-width: 300px;
+    max-height: 300px;
+    border: 2px solid gray;
+}
+
+.peliInfoFav{
+    display: flex;
+    flex-direction: row;
     width: 100%;
+    border: 5px solid gray;
 }
 
-article 
+.peliInfo{
+    width: 60%;
+    justify-content: center;
+    display: flex;
+    border: 5px solid gray;
+    flex-direction: column;
+}
+
+.peliFav{
+    width: 40%;
+    display: flex;
+    text-align: end;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 5px solid gray;
+}
+
+.peliFav img{
+    display: flex;
+    width: 40%;
+}
+
 
 h5{
     color: rgb(162,83,123);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size:small;
-    margin: 10px;
+    text-align: left;
 }
 
 h6{
     color: rgb(162,83,123);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size:small;
-    margin: 10px;
 }
 
 img{
@@ -153,15 +179,6 @@ img{
     max-height: 300px;
     justify-content: space-around;
 }
-
-.favorite {
-    display: flex;
-    flex-wrap: wrap;
-    width: 50px;
-    margin: 0px;
-}
-
-/* FOOTER */
 
 footer{
     height: 50px;
