@@ -34,6 +34,11 @@ h1{
     margin: 30px;
 }
 
+<<<<<<< HEAD
+=======
+/* NAVEGACION PRINCIPAL */
+
+>>>>>>> 607bdb7163ceb1d5c1725299ed98596b1973813f
 ul{
     list-style: none;
     padding: 0px;
@@ -66,7 +71,9 @@ li{
     border-radius: 30px;
 }
 
-form{
+/* BUSCADOR */
+
+.busqueda {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -90,6 +97,11 @@ input{
     color: white;
 }
 
+<<<<<<< HEAD
+=======
+/* TITULOS INDEX Y GENEROS */
+
+>>>>>>> 607bdb7163ceb1d5c1725299ed98596b1973813f
 h2{
     display: flex;
     flex-wrap: wrap;
@@ -102,21 +114,22 @@ h2{
     padding-top: 20px;
 }
 
-section{
+h3{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgb(162,83,123);
     color: white;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    margin: 0px;
+    padding: 20px 0px
 }
 
-article {
+h4{
     display: flex;
     flex-wrap: wrap;
+<<<<<<< HEAD
     flex-direction: column;
     border: 10px solid #F7D69D;
     background-color: #F7D69D;
@@ -158,6 +171,14 @@ article {
 .peliFav img{
     display: flex;
     width: 40%;
+=======
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    margin: 10px 0px;
+>>>>>>> 607bdb7163ceb1d5c1725299ed98596b1973813f
 }
 
 
@@ -166,20 +187,159 @@ h5{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size:small;
     text-align: left;
+<<<<<<< HEAD
+=======
+    margin: 10px 5px;
+>>>>>>> 607bdb7163ceb1d5c1725299ed98596b1973813f
 }
 
 h6{
     color: rgb(162,83,123);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size:small;
+<<<<<<< HEAD
+=======
+    margin: 10px 5px;
+
+}
+
+
+/* INDEX DE PELICULAS */
+
+.home_movies{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(162,83,123);
+    color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 10px solid #F7D69D;
+    background-color: #F7D69D;
+    margin: 0px 5px;
+    width: 220px;
+    height: 450px;
+    
+>>>>>>> 607bdb7163ceb1d5c1725299ed98596b1973813f
 }
 
 img{
+    display: flex;
+    flex-wrap: wrap;
     max-width: 300px;
     max-height: 300px;
     justify-content: space-around;
 }
 
+<<<<<<< HEAD
+=======
+.favorite{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50px;
+    height: 50px;
+    margin: 0px;
+}
+
+/* GENERO */
+
+.generos_both{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0px;
+}
+
+.generos_list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.generos_list ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;
+    background-color: rgb(162,83,123);
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.generos_list li{
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    padding: 10px;
+    justify-content: center;
+    background-color: rgb(90, 87, 136);
+    margin-bottom: 30px;
+    width: 400px;
+}
+
+/* DETALLES GENEROS */
+
+.detalles_generos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(162,83,123);
+    color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.generoarticulos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: 10px solid #F7D69D;
+    background-color: #F7D69D;
+    margin: 0px;
+}
+
+.generotitulos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(90, 87, 136);
+    width: 500px;
+    margin: 20px;
+    padding: 10px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+p{
+    font-size: small;
+    text-align: center;
+    width: 900px;
+    font-style: italic;
+    font-size: medium;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+/* FOOTER */
+
+>>>>>>> 607bdb7163ceb1d5c1725299ed98596b1973813f
 footer{
     height: 50px;
     display: flex;
@@ -190,6 +350,6 @@ footer{
     font-weight: bold;
 }
 
-h4{
+.nombres {
     margin: 20px 30px;
 }
