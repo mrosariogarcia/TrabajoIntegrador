@@ -119,9 +119,7 @@ section{
     padding-top: 20px;
 }
 
-article {
-    display: flex;
-    flex-wrap: wrap;
+article {    
     flex-direction: column;
     border: 10px solid #F7D69D;
     background-color: #F7D69D;
@@ -129,6 +127,12 @@ article {
     max-width: 220px;
     height: 450px;
 }
+
+article img{
+    width: 100%;
+}
+
+article 
 
 h5{
     color: rgb(162,83,123);
