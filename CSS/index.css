@@ -34,11 +34,8 @@ h1{
     margin: 30px;
 }
 
-<<<<<<< HEAD
-=======
 /* NAVEGACION PRINCIPAL */
 
->>>>>>> 607bdb7163ceb1d5c1725299ed98596b1973813f
 ul{
     list-style: none;
     padding: 0px;
@@ -97,11 +94,8 @@ input{
     color: white;
 }
 
-<<<<<<< HEAD
-=======
 /* TITULOS INDEX Y GENEROS */
 
->>>>>>> 607bdb7163ceb1d5c1725299ed98596b1973813f
 h2{
     display: flex;
     flex-wrap: wrap;
@@ -129,56 +123,12 @@ h3{
 h4{
     display: flex;
     flex-wrap: wrap;
-<<<<<<< HEAD
-    flex-direction: column;
-    border: 10px solid #F7D69D;
-    background-color: #F7D69D;
-    margin: 0px 5px;
-    max-width: 220px;
-    
-}
-
-.peliFoto{
-    max-width: 300px;
-    max-height: 300px;
-    border: 2px solid gray;
-}
-
-.peliInfoFav{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    border: 5px solid gray;
-}
-
-.peliInfo{
-    width: 60%;
-    justify-content: center;
-    display: flex;
-    border: 5px solid gray;
-    flex-direction: column;
-}
-
-.peliFav{
-    width: 40%;
-    display: flex;
-    text-align: end;
-    flex-direction: column;
-    flex-wrap: wrap;
-    border: 5px solid gray;
-}
-
-.peliFav img{
-    display: flex;
-    width: 40%;
-=======
     justify-content: center;
     align-items: center;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: large;
     margin: 10px 0px;
->>>>>>> 607bdb7163ceb1d5c1725299ed98596b1973813f
 }
 
 
@@ -187,18 +137,13 @@ h5{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size:small;
     text-align: left;
-<<<<<<< HEAD
-=======
     margin: 10px 5px;
->>>>>>> 607bdb7163ceb1d5c1725299ed98596b1973813f
 }
 
 h6{
     color: rgb(162,83,123);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size:small;
-<<<<<<< HEAD
-=======
     margin: 10px 5px;
 
 }
@@ -206,7 +151,7 @@ h6{
 
 /* INDEX DE PELICULAS */
 
-.home_movies{
+section{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -219,8 +164,6 @@ h6{
 }
 
 article {
-    display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     border: 10px solid #F7D69D;
     background-color: #F7D69D;
@@ -228,25 +171,19 @@ article {
     width: 220px;
     height: 450px;
     
->>>>>>> 607bdb7163ceb1d5c1725299ed98596b1973813f
 }
 
 img{
-    display: flex;
-    flex-wrap: wrap;
     max-width: 300px;
     max-height: 300px;
     justify-content: space-around;
 }
 
-<<<<<<< HEAD
-=======
 .favorite{
-    display: flex;
-    flex-wrap: wrap;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 25 px;
     margin: 0px;
+    justify-content: space-around;
 }
 
 /* GENERO */
@@ -339,7 +276,6 @@ p{
 
 /* FOOTER */
 
->>>>>>> 607bdb7163ceb1d5c1725299ed98596b1973813f
 footer{
     height: 50px;
     display: flex;
