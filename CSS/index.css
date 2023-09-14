@@ -105,7 +105,7 @@ h2{
     background-color: rgb(162,83,123);
     color: white;
     margin: 0px;
-    padding-top: 20px;
+    padding: 20px 0px;
 }
 
 h3{
@@ -117,7 +117,7 @@ h3{
     background-color: rgb(162,83,123);
     color: white;
     margin: 0px;
-    padding: 20px 0px
+    padding-top: 20px;
 }
 
 h4{
@@ -148,7 +148,6 @@ h6{
 
 }
 
-
 /* INDEX DE PELICULAS */
 
 section{
@@ -164,13 +163,12 @@ section{
 }
 
 article {
-    flex-direction: column;
+    flex-direction: row;
     border: 10px solid #F7D69D;
     background-color: #F7D69D;
     margin: 0px 5px;
     width: 220px;
-    height: 450px;
-    
+    height: 400px;
 }
 
 img{
@@ -229,7 +227,7 @@ img{
 .detalles_generos{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgb(162,83,123);
@@ -238,41 +236,18 @@ img{
     padding-top: 20px;
 }
 
-.generoarticulos {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    border: 10px solid #F7D69D;
-    background-color: #F7D69D;
-    margin: 0px;
-}
-
-.generotitulos{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(90, 87, 136);
-    width: 500px;
-    margin: 20px;
-    padding: 10px;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    font-size: large;
-}
-
 p{
     font-size: small;
     text-align: center;
-    width: 900px;
+    justify-content: center;
+    width: 800px;
     font-style: italic;
     font-size: medium;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
+
 
 /* FOOTER */
 
@@ -281,6 +256,7 @@ footer{
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    background-color: rgb(32,50,103);
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
