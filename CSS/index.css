@@ -298,6 +298,10 @@ p{
     width: 29px;
 }
 
+.verde{
+    width: 32px;
+}
+
 .subSection {
     background-color: #F7D69D;
     margin: 40px 200px;
@@ -316,9 +320,9 @@ p{
 .row1 {
     flex-direction: row;
     width: 160px;
-    justify-content: flex-end;
     border: 0px;
     margin: 0px;
+    justify-content: center;
 }
 
 .box1 {
@@ -332,10 +336,10 @@ p{
 
 .box2 {
     width: 50%;
-    flex-direction: column;
+    flex-direction: row;
     display: flex;
-    text-align: end;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .p1 {
@@ -345,6 +349,10 @@ p{
     margin: 10px;
     font-style: normal;
     text-align: start;
+}
+
+.p2{
+    width: 130px;
 }
 
 .tituloFilm {
@@ -374,6 +382,11 @@ p{
     font-size: small;
 }
 
+.abajo{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
 form{
     display: flex;
     flex-wrap: wrap;
@@ -384,6 +397,12 @@ form{
     color: white;
     margin: 0px;
     padding: 20px;
+}
+
+iframe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* FOOTER */
@@ -420,5 +439,5 @@ footer{
 
 
 
-    
+
 }
