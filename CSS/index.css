@@ -248,6 +248,143 @@ p{
 
 }
 
+/* DETALLES PELICULAS Y SERIES */
+
+.detalles{ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+    margin: 0px;
+    padding: 20px;
+    background-color: rgb(32,50,103);
+}
+
+.topImage {
+    max-width: 100%;
+    max-height: fit-content;
+}
+
+.contenedorPadre {
+    background-color: rgb(162,83,123);
+    padding-bottom: 20px;
+}
+
+.divDetalles  {
+    flex-direction: row; 
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.calificaciones {
+    flex-direction: column;
+    align-items: center;
+    height: 60px;
+    width: 50px;
+    border: 0px;
+    margin: 0px;
+}
+
+.icons {
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.popcorn{
+    width: 29px;
+}
+
+.subSection {
+    background-color: #F7D69D;
+    margin: 40px 200px;
+    flex-wrap: wrap;
+    display: flex;
+    border-radius: 20px;
+    padding: 0px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.row1 {
+    flex-direction: row;
+    width: 160px;
+    justify-content: flex-end;
+    border: 0px;
+    margin: 0px;
+}
+
+.box1 {
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    flex-wrap: wrap;
+}
+
+.box2 {
+    width: 50%;
+    flex-direction: column;
+    display: flex;
+    text-align: end;
+    flex-wrap: wrap;
+}
+
+.p1 {
+    color: rgb(162,83,123);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:small;
+    margin: 10px;
+    font-style: normal;
+    text-align: start;
+}
+
+.tituloFilm {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(90, 87, 136);
+    font-size:large;
+    font-weight: 600;
+    text-decoration: underline;
+    margin: 10px;
+    font-style: normal;
+    text-align: start;
+}
+
+.subTitulo {
+    color: rgb(90, 87, 136);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.generosPelicula {
+    background-color: rgb(66,63,114);
+    width: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.generoTamano {
+    font-size: small;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(32,50,103);
+    color: white;
+    margin: 0px;
+    padding: 20px;
+}
 
 /* FOOTER */
 
@@ -264,4 +401,24 @@ footer{
 
 .nombres {
     margin: 20px 30px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 320px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 }
