@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Serie</title>
+    <link href="./CSS/detailMovie.css" rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap" rel="stylesheet">
+    <link href="./CSS/index.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="header1">
+            <a href="index.html">
+                <img class="logo" src="./IMG/hollywoodShines.png">
+            </a>
+            <h1>HOLLYWOOD SHINES</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="genres.html">Generos</a></li>
+                <li><a href="favorite.html">Favoritos</a></li>
+            </ul>
+            <form class="busqueda" action="searchResults.html" method="get">
+                <div>
+                    <label for="nombre">¿Qué desea ver?</label>
+                    <input id="nombre" type="text" name="nombre" value="">
+                </div>
+                <div>
+                    <button type="submit">Buscar</button>
+                </div>
+            </form>
+        </nav>
+
+    </header>
+
+    <h3 class="detalles"> DETALLES de SERIE </h3>
+
+    <main class="contenedorPadre">
+
+        <img class="topImage" src="./img/detalles/theCrowdedRoomLargo.jpg">
+
+        <section class="subSection">
+
+            <div class="divDetalles">
+                <p class="tituloFilm">The Crowded Room</p>
+                <p class="p1">En Manhattan, en el verano de 1979, un joven es
+                    detenido por un crimen espeluznante, y un improbable detective
+                    se ve obligado a resolver el misterio que se esconde tras él antes
+                    de que el verdadero criminal vuelva a atacar.</p>
+            </div>
+
+            <div class="divDetalles row">
+                <div class="divDetalles box1">
+                    <article class="calificaciones">
+                        <img class="icons verde" src="./img/detalles/manch.png">
+                        <p class="p1">33%</p>
+                    </article>
+
+                    <article class="calificaciones">
+                        <img class="icons popcorn" src="./img/detalles/poch.png">
+                        <p class="p1">92%</p>
+                    </article>
+                </div>
+
+                <div class="box2">
+                    <div class="row1">
+                        <p class="p1 p2 subTitulo">Estreno:</p>
+                        <p class="p1 p2">9 de junio de 2023</p>
+                    </div>
+
+                    <div class="row1">
+                        <p class="p1 p2 subTitulo">Duración:</p>
+                        <p class="p1 p2">38-56 min</p>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="generosPelicula">
+                <ul class="abajo">
+                    <li class="generoTamano"><a href="genres.html">Drama</a></li>
+                    <li class="generoTamano"><a href="genres.html">Thriller Psicológico</a></li>
+                    <li class="corazon"><a href="favorite.html"><img src="./img/favorite.png"></a></li>
+                </ul>
+            </nav>
+
+        </section>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/4w1xZA7pX2c?si=FUu5q0UfPUNlP9tP"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+
+
+    </main>
+
+    <footer class="nombres">
+
+        <h4 class="nombres"> Trinidad Fontan Balestra </h4>
+        <h4 class="nombres"> Maria Rosario Garcia </h4>
+        <h4 class="nombres"> Felicitas Quiroga Mange</h4>
+
+    </footer>
+
+</body>
+
+</html>

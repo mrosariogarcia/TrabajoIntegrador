@@ -15,20 +15,36 @@
 
 <body>
     <header>
-
-        <a href="index.html">
-            <img class="logo" src="./IMG/hollywoodShines.png">
-        </a>
-
-        <h1>HOLLYWOOD SHINES</h1>
+        <div class="header1">
+            <a href="index.html">
+                <img class="logo" src="./IMG/hollywoodShines.png">
+            </a>
+            <h1>HOLLYWOOD SHINES</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="genres.html">Generos</a></li>
+                <li><a href="favorite.html">Favoritos</a></li>
+            </ul>
+            <form class="busqueda" action="searchResults.html" method="get">
+                <div>
+                    <label for="nombre">¿Qué desea ver?</label>
+                    <input id="nombre" type="text" name="nombre" value="">
+                </div>
+                <div>
+                    <button type="submit">Buscar</button>
+                </div>
+            </form>
+        </nav>
 
     </header>
 
-    <h3 class="detalles"> DETALLES de PELICULA </h3>
-
     <main class="contenedorPadre">
 
-        <img class="topImage" src="./IMG/Detalles/IndianaJonesTopImage.png">
+    <h3 class="detalles"> DETALLES de PELICULA </h3>
+
+        <img class="topImage" src="./img/detalles/indianaJonesTopImage.png">
 
         <section class="subSection">
 
@@ -49,7 +65,7 @@
                     </article>
 
                     <article class="calificaciones">
-                        <img class="icons popcorn" src="./IMG/Detalles/1.png">
+                        <img class="icons popcorn" src="./img/detalles/poch.png">
                         <p class="p1">88%</p>
                     </article>
                 </div>
@@ -79,11 +95,11 @@
 
     </main>
 
-    <footer>
+    <footer class="nombres">
 
         <h4 class="nombres"> Trinidad Fontan Balestra </h4>
         <h4 class="nombres"> Maria Rosario Garcia </h4>
-        <h4 class="nombres"> Felicitas Quiroga </h4>
+        <h4 class="nombres"> Felicitas Quiroga Mange</h4>
 
     </footer>
 
