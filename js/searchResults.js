@@ -6,49 +6,72 @@ let buscado = resultadoObj.get("nombre");
 
 const API_KEY = "5990392eb4d2b299d1f882dd6addfeae"
 
-fetch(`https://api.themoviedb.org/3/search/movie?query=${buscado}&api_key=${API_KEY}`)
-.then(function(response){
-    return response.json()
-})
+let busquedaPeliculas = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${nombre}&page=1&include_adult=false`
+let busquedaSeries = `https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&language=en-US&page=1&query=${nombre}&include_adult=false`
 
-.then(function(data){
-    
-    let info = data.results
+let respuesta = document.querySelector(".busqueda");
+    respuesta.innerText = nombre;
+    console.log(respuesta)
 
-    for (let i=0; i<=info.length; i++){
-        
-        //imagen de pelicula
-        let foto  = info[i].poster_path
-        let imagen = `https://image.tmdb.org/t/p/w342/${foto}`
-        
-        //titulo de pelicula
-        let titulo = info[i].title
-        
-        //id de pelicula
-        let id = info[i].id
+/* Fetch para la busqueda de peliculas */
+fetch(busquedaPeliculas)
 
-        //release date de pelicula
-        let releaseDate = info[1].release_date
+    .then(function(response){
+        return response.json()
+        console.log(response)
+    })
 
-        //tendria que ir un if por si la "linea" no tiene imagen
+    .then(function(data){
 
-        //creamos una variable 'devolucion' para guardar todas las opciones de peliculas y luego, poder mostrarlas en el html
+
+        let arrayInfo = data.results
+        console.log(arrayInfo)
+
+        // Lugar para la devolucion
+        let lugarDevolucion = document.querySelector(".res_busqueda")
         let devolucion = ""
 
-        devolucion += `<article>
-                        <img src="${imagen}">
-                        <a href="detailSerie.html?id=${id}">
-                            <h5>${titulo}</h5>
-                        </a>
-                        <h6>${releaseDate}</h6>
-                    </article>`
+        // Recorre la API  y saco la informacion que necesito
 
-    }
-    
-    //pasamos la devolucion a DOM
-    
-})
+        for (let i=0; i <=5; i++){
+            
+                //IMAGEN de pelicula
 
-.catch(function(err){
-    console.log(err)
-})
+            // Si no tiene imagen: 
+            let foto = './img/imagen_not_found.jpg'
+
+            // Si tiene imagen: 
+            if (arrayInfo[i].poster_path != null){
+                let foto  = arrayInfo[i].poster_path
+                let imagen = `https://image.tmdb.org/t/p/w342/${foto}`
+            }
+            
+                //titulo de pelicula
+            
+            let titulo = arrayInfo[i].title
+            
+            //id de pelicula
+            let id = arrayInfo[i].id
+
+            //release date de pelicula
+            let releaseDate = arrayInfo[1].release_date
+
+            //creamos una variable 'devolucion' para guardar todas las opciones de peliculas y luego, poder mostrarlas en el html
+
+            devolucion += `<article>
+                            <img src="${imagen}">
+                            <a href="detailSerie.html?id=${id}">
+                                <h5>${titulo}</h5>
+                            </a>
+                            <h6>${releaseDate}</h6>
+                        </article>`
+
+        }
+
+        //pasamos la devolucion a DOM
+        devolucionP.innerHTML = devolucion
+    })
+
+    .catch(function(e){
+        console.log(e)
+    })
