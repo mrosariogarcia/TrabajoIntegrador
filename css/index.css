@@ -155,7 +155,7 @@ h6{
 
 /* INDEX DE PELICULAS */
 
-section{
+#claseSection{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -166,9 +166,10 @@ section{
     padding: 20px 30px;
 }
 
-article {
+#claseArticle {
     background-color: #F7D69D;
     height: 400px;
+    width: 200px;
     margin-bottom: 10px;
     margin: 5px;
 }
