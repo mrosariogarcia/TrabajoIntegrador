@@ -1,8 +1,5 @@
 let apiK = "5990392eb4d2b299d1f882dd6addfeae"
 
-let res = location.search;
-let resObj = new URLSearchParams(res);
-
 //Generos PELICULAS
 
 fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiK}`)
