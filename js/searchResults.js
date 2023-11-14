@@ -6,40 +6,36 @@ let buscado = resObj.get("nombre");
 
 const API_KEY = "5990392eb4d2b299d1f882dd6addfeae"
 
-let busquedaPeliculasSeries = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${nombre}&page=1&include_adult=false`
+let busquedaMovies = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${buscado}&page=1&include_adult=false`
+let busquedaTv = `https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&language=en-US&query=${buscado}&page=1&include_adult=false`
 
-let respuesta = document.querySelector(".busqueda");
-    respuesta.innerText = nombre;
-    console.log(respuesta)
+
+let palabraBuscada = document.querySelector("#palabraBuscada");
+    palabraBuscada.innerText = buscado;
+    
 
 /* Fetch para la busqueda de peliculas */
-fetch(busquedaPeliculas)
+fetch(busquedaMovies)
 
     .then(function(response){
         return response.json()
-        console.log(response)
     })
 
     .then(function(data){
         let arrayInfo = data.results
-        console.log(arrayInfo)
-
-        // Lugar para la devolucion
-        let lugarDevolucion = document.querySelector(".res_busqueda")
-        let devolucion = ""
-
-        // Recorre la API  y saco la informacion que necesito
-
-        for (let i=0; i <=5; i++){
-            
+   
+        let devolucion;
+        const pelisEncontradas = document.querySelector(".res_busqueda")
+        for (let i=0; i < arrayInfo.length; i++){
+            console.log(arrayInfo[i])
                 //IMAGEN de pelicula
             // Si no tiene imagen: 
             let foto = ''
-
-            // Si tiene imagen: 
+            let imagen;
+            //Si tiene imagen: 
             if (arrayInfo[i].poster_path != null){
                 let foto  = arrayInfo[i].poster_path
-                let imagen = `https://image.tmdb.org/t/p/w342/${foto}`
+                imagen = `https://image.tmdb.org/t/p/w342/${foto}`
             }
             
                 //titulo de pelicula
@@ -54,9 +50,9 @@ fetch(busquedaPeliculas)
 
             //creamos una variable 'devolucion' para guardar todas las opciones de peliculas y luego, poder mostrarlas en el html
 
-            devolucion += `<article class = "res_busqueda">
+            devolucion += `<article class = "">
                             <img src="${imagen}" class="sectionarticleimg">
-                            <a href=`detailMovie.html?id=${id}`>
+                            <a href="detailMovie.html?id=${id}">
                                 <h5>${titulo}</h5>
                             </a>
                             <h6>${releaseDate}</h6>
@@ -65,10 +61,9 @@ fetch(busquedaPeliculas)
         }
 
         //pasamos la devolucion a DOM
-        lugarDevolucion.innerHTML = devolucion
+        pelisEncontradas.innerHTML = devolucion
     })
 
     .catch(function(e){
-        return e;
         console.log(e)
     })

@@ -17,20 +17,46 @@ fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiK}`)
 })
 
 .then(function(data){
-    let listaG = data.genres
-    console.log(listaG)
+    let listaP = data.genres
+    console.log(listaP)
 
     let pelisG = document.querySelector("#generosP") // Lugar donde agregaremos el listado de Genero
     
     // Creamos un espacio para agregar el listado de GENEROS
     let generosAPI = ""
 
-    for (let i=0; i<listaG.length; i++){
-        generosAPI += `<li><a href="detailGenres.html?id=${listaG[i].id}"> ${listaG[i].name} </a></li>`
+    for (let i=0; i<10git; i++){
+        generosAPI += `<li><a href="detailGenres.html?id=${listaP[i].id}"> ${listaP[i].name} </a></li>`
     }
 
     pelisG.innerHTML = generosAPI
 
+})
+
+.catch(function(e){
+    console.log("Error" + e)
+})
+
+//Generos SERIES
+fetch(`https://api.themoviedb.org/3/genre/tv/list?api_key=${apiK}`)
+
+.then(function(response){
+    let data = response.json()
+    return data
+})
+
+.then(function(data){
+    let listaS = data.genres
+    console.log(listaS)
+
+    let seriesG = document.querySelector("#generosS")
+    let generosAPIS = ""
+
+    for (let i=0; i<10; i++){
+        generosAPIS += `<li><a href="detailGenres.html?id=${listaS[i].id}"> ${listaS[i].name} </a></li>`
+    }
+
+    seriesG.innerHTML = generosAPIS
 })
 
 .catch(function(e){
