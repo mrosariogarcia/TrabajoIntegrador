@@ -1,8 +1,8 @@
 // Buscador
 
-let resultado = location.search;
-let resultadoObj = new URLSearchParams(resultado);
-let buscado = resultadoObj.get("nombre");
+let res = location.search;
+let resObj = new URLSearchParams(res);
+let buscado = resObj.get("nombre");
 
 const API_KEY = "5990392eb4d2b299d1f882dd6addfeae"
 
