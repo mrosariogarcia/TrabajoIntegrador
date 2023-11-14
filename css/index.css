@@ -423,7 +423,8 @@ footer{
     height: 50px;
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: end;
     background-color: rgb(32,50,103);
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -432,7 +433,12 @@ footer{
 
 .nombres {
     margin: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
 }
+
 
 /* MEDIA QUERIES */
 
