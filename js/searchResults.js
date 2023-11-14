@@ -28,7 +28,7 @@ fetch(busquedaMovies)
         const pelisEncontradas = document.querySelector(".res_busqueda")
         for (let i=0; i < arrayInfo.length; i++){
             console.log(arrayInfo[i])
-                //IMAGEN de pelicula
+            //IMAGEN de pelicula
             // Si no tiene imagen: 
             let foto = ''
             let imagen;
