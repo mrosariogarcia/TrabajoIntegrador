@@ -3,10 +3,6 @@ let apiK = "5990392eb4d2b299d1f882dd6addfeae"
 let res = location.search;
 let resObj = new URLSearchParams(res);
 
-let idP = resObj.get('id_genero_pelis')
-let idS = resObj.get('id_genero_series')
-
-
 //Generos PELICULAS
 
 fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiK}`)
@@ -25,7 +21,7 @@ fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiK}`)
     // Creamos un espacio para agregar el listado de GENEROS
     let generosAPI = ""
 
-    for (let i=0; i<10git; i++){
+    for (let i=0; i<listaP.length; i++){
         generosAPI += `<li><a href="detailGenres.html?id=${listaP[i].id}"> ${listaP[i].name} </a></li>`
     }
 
@@ -52,7 +48,7 @@ fetch(`https://api.themoviedb.org/3/genre/tv/list?api_key=${apiK}`)
     let seriesG = document.querySelector("#generosS")
     let generosAPIS = ""
 
-    for (let i=0; i<10; i++){
+    for (let i=0; i<listaS.length; i++){
         generosAPIS += `<li><a href="detailGenres.html?id=${listaS[i].id}"> ${listaS[i].name} </a></li>`
     }
 
