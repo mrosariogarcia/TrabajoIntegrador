@@ -155,6 +155,18 @@ h6{
 
 /* INDEX DE PELICULAS */
 
+.contenedorPelis{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+    background-color: rgb(162,83,123);
+    color: white;
+    padding: 20px 30px;
+}
+
+
 #claseSection{
     display: flex;
     flex-wrap: wrap;

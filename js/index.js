@@ -39,7 +39,7 @@ fetch(apiPeliculasPopulares)
             let releaseDate = arrayPeliculasPopulares[i].release_date
             
             peliPop += `<article id="claseArticle" class="contenedorPelis">
-                            <img src="${imagen}" class="sectionarticleimg">
+                            <img src="${imagen}">
                             <a href="detailMovie.html?id=${id}">
                                 <h5>${titulo}</h5>
                             </a>
@@ -84,7 +84,7 @@ fetch(apiSeriesPopulares)
             let releaseDate = arraySeriesPopulares[i].first_air_date
             
             seriePop += `<article id="claseArticle" class="contenedorPelis">
-                            <img src="${imagen}" class="sectionarticleimg">
+                            <img src="${imagen}">
                             <a href="detailMovie.html?id=${id}">
                                 <h5>${titulo}</h5>
                             </a>
@@ -129,7 +129,7 @@ fetch(apiPeliculasMejorCalificadas)
             let releaseDate = arrayPeliculasMejorCalificadas[i].release_date
             
             peliCalif += `<article id="claseArticle" class="contenedorPelis">
-                            <img src="${imagen}" class="sectionarticleimg">
+                            <img src="${imagen}">
                             <a href="detailMovie.html?id=${id}">
                                 <h5>${titulo}</h5>
                             </a>
