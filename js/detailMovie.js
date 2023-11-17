@@ -9,8 +9,6 @@ let urlRecomendations = `https://api.themoviedb.org/3/movie/${idPelicula}/recomm
 
 console.log(urlDetallePelicula)
 
-
-
 //Fetch para los detalles de peliculas
 fetch(urlDetallePelicula)
     .then(function(response){
@@ -23,11 +21,6 @@ fetch(urlDetallePelicula)
         
         let contenedorDetallePeli = document.querySelector('#contenedorDetallePelicula');
         
-
-        // for (let i = 0; i < data.genres.length; i++){
-        //     generos.innerHTML += `<li class="generoTamano"><a href="detailGenre.html?id=${data.genres[i].id}&name=${data.genres[i].name}">${data.genres[i].name}</a></li>`
-        // }
-
         contenedorDetallePeli.innerHTML += `<div>
             <img class="imagenFilm" src="https://image.tmdb.org/t/p/w342${data.poster_path}">
         </div>
@@ -57,7 +50,11 @@ fetch(urlDetallePelicula)
                 </div>
             </div>
 
-            <div id="videoTrailer"></div>
+            <div id="videoTrailer">
+                <div id="videoTrailer"></div>
+                <a id="linkVideo"></a>
+                <div id="masVideos">Mas videos y trailers</div>
+            </div>
 
         </div>
 
@@ -70,6 +67,11 @@ fetch(urlDetallePelicula)
             <section id="verRecomendaciones" class="contenedorPelisDetalles"></section>
             </div>
         </nav>`
+
+        // <div class="foto_trailer">
+        //                             <img src="${urlImagen + data.poster_path}" width="300px" height ='520px'>
+        //                             <div class = "Trailer"></div>
+        //                             <div class="otrosVideos"><p>Todos los videos y trailers</p></div>
 
         let listaGeneros = document.querySelector('#generos')
         for (let i=0; i < data.genres.length; i++){
@@ -111,19 +113,43 @@ fetch(urlRecomendations)
     })
 
 // trailer
-let urlTrailer = urlTrailer = `https://api.themoviedb.org/3/movie/${idPelicula}/videos?api_key=f216cd46b728d209895b1387e51e9182&language=en-US`
+let urlTrailer = `https://api.themoviedb.org/3/movie/${idPelicula}/videos?api_key=f216cd46b728d209895b1387e51e9182&language=en-US`
 fetch(urlTrailer)
     .then(function(response){
         return response.json()
     })
     .then(function(data){
-        trailerP = data.results
-        console.log(trailerP)
+        todosVideos = data.results;
+        console.log(todosVideos);
 
-        let trailerV = document.querySelector("#videoTrailer")
-        
-        if (trailerP.video == null){
-            trailerV.innerHTML = `<p>"No encontramos ningun trailer"</p>`
+        let trailer = document.querySelector("#videoTrailer");
+        let linkVideo = document.querySelector('#linkAVideo');
+        let masVideos = document.querySelector('#masVideos');
+
+        for (let i=0; i<todosVideos.length; i++){
+            if(todosVideos[i].type == "Trailer"){
+                let vid = todosVideos[i]
+                trailer.innerHTML = `Trailer: ${vid.name}`
+                linkVideo.innerHTML += `<a src="https://www.youtube.com/embed/${vid[i].key}">Ver en YouTube</a>`
+                break
+            }
+            else{
+                trailer.innerHTML = `No hay trailers disponibles. Video Recomendado: ${todosVideos[0].name}`
+                linkVideo.innerHTML = `<h5 href="https://www.youtube.com/embed/${todosVideos[0].name}">Ver en YouTube</h5>`
+            }
         }
-        for (let i=0; i<)
+        
+        let listaVideos = ``
+        if (todosVideos.length > 2) {
+            for (let i = 0; i < todosVideos.length; i++){
+                listaVideos += `<a href="https://www.youtube.com/embed/${todosVideos[i].key}">${todosVideos[i].name}</a>`
+            }
+            masVideos.innerHTML = listaVideos  
+        }
+        else{
+            masVideos.innerHTML = `<h5>No hay videos adicionales disponibles.</h5>`
+            }
+    })
+    .catch(function(er){
+        console.log(er)
     })

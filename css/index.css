@@ -202,6 +202,10 @@ h6{
     margin: 5px;
 }
 
+#videoTrailer{
+    flex-direction: column;
+}
+
 section article img{
     width: 200px;
     height: 320px;
