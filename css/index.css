@@ -277,6 +277,11 @@ p{
     background-color: rgb(32,50,103);
 }
 
+.imagenFilm{
+    width: 180px;
+    margin-top: 20px;
+}
+
 .sectionFilm{
     display: flex;
     flex-wrap: wrap;
