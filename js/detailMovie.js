@@ -18,7 +18,6 @@ fetch(urlDetallePelicula)
         let titulo = document.querySelector('.tituloFilm')
         let calificacion = document.querySelector('#calificacion')
         let fechaEstreno = document.querySelector('#fechaEstreno')
-        let duracion = document.querySelector('#duracion')
         let sinopsis = document.querySelector('#sinopsis')
         let genero = document.querySelector('#genero')
 

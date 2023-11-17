@@ -85,7 +85,7 @@ fetch(apiSeriesPopulares)
             
             seriePop += `<article id="claseArticle" class="contenedorPelis">
                             <img src="${imagen}">
-                            <a href="detailMovie.html?id=${id}">
+                            <a href="detailSerie.html?id=${id}">
                                 <h5>${titulo}</h5>
                             </a>
                             <h6>${releaseDate}</h6>
