@@ -9,6 +9,8 @@ let urlRecomendations = `https://api.themoviedb.org/3/movie/${idPelicula}/recomm
 
 console.log(urlDetallePelicula)
 
+
+
 //Fetch para los detalles de peliculas
 fetch(urlDetallePelicula)
     .then(function(response){
@@ -67,7 +69,7 @@ fetch(urlDetallePelicula)
 
         let listaGeneros = document.querySelector('#generos')
         for (let i=0; i < data.genres.length; i++){
-            listaGeneros.innerHTML += `<li class="generoTamano"><a href="detailGenre.html?id=${data.genres[i].id}&name=${data.genres[i].name}">${data.genres[i].name}</a></li>`
+            listaGeneros.innerHTML += `<li class="generoTamano"><a href="detailGenres.html?id=${data.genres[i].id}&name=${data.genres[i].name}">${data.genres[i].name}</a></li>`
         }
     })
     .catch(function(er){
