@@ -88,7 +88,7 @@ fetch(busquedaSeries)
             let imagen;
             //Si tiene imagen: 
             if (arrayInfo[i].poster_path != null){
-                let foto  = arrayInfo[i].poster_path
+                foto  = arrayInfo[i].poster_path
                 imagen = `https://image.tmdb.org/t/p/w342/${foto}`
             }
             

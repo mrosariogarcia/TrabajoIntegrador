@@ -282,9 +282,23 @@ p{
     max-height: fit-content;
 }
 
+.sectionFilm{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.portadaFilm{
+    width: 200px;
+    background-color: #F7D69D;
+    margin-top: 20px;
+}
+
 .contenedorPadre {
     background-color: rgb(162,83,123);
     padding-bottom: 20px;
+    flex-direction: row;
 }
 
 .divDetalles  {
@@ -323,8 +337,10 @@ p{
     margin: 40px 200px;
     flex-wrap: wrap;
     display: flex;
+    flex-direction: row;
     border-radius: 20px;
     padding: 0px;
+    justify-content: center;
 }
 
 .row {

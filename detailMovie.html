@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Movie</title>
-    <link href="./CSS/detailMovie.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap" rel="stylesheet">
@@ -43,57 +42,50 @@
     <main class="contenedorPadre">
 
         <h3 class="detalles"> DETALLES de PELICULA </h3>
-
-        <img class="topImage" src="./img/detalles/indianaJonesTopImage.png">
-
+        
         <section class="subSection">
 
+            <div>
+                <img class="portadaFilm" id="fotoPortada">
+            </div>
+
             <div class="divDetalles">
-                <p class="tituloFilm">Indiana Jones and the Dial of Destiny</p>
-                <p class="p1">En 1969, un Indiana Jones envejecido
-                    y derrotado por la vida regresa a la acción para evitar
-                    que la hija de uno de sus amigos venda un artilugio que
-                    permite viajar en el tiempo a unos nazis que pretenden
-                    alterar el curso de la Segunda Guerra Mundial.</p>
+                <p class="tituloFilm"></p>
+                <p class="p1" id="sinopsis"></p>
             </div>
 
             <div class="divDetalles row">
                 <div class="divDetalles box1">
                     <article class="calificaciones">
-                        <img class="icons" src="./IMG/Detalles/tomateRTomatos.png">
-                        <p class="p1">69%</p>
-                    </article>
-
-                    <article class="calificaciones">
                         <img class="icons popcorn" src="./img/detalles/poch.png">
-                        <p class="p1">88%</p>
+                        <p class="p1" id="calificacion"></p>
                     </article>
                 </div>
 
                 <div class="box2">
                     <div class="row1">
                         <p class="p1 p2 subTitulo">Estreno:</p>
-                        <p class="p1 p2">29 de junio de 2023</p>
+                        <p class="p1 p2" id="fechaEstreno"></p>
                     </div>
 
                     <div class="row1">
                         <p class="p1 p2 subTitulo">Duración:</p>
-                        <p class="p1 p2">2h 22m</p>
+                        <p class="p1 p2" id="duracion"></p>
                     </div>
                 </div>
             </div>
 
             <nav class="generosPelicula">
                 <ul class="abajo">
-                    <li class="generoTamano"><a href="genres.html">Acción</a></li>
+                    <li class="generoTamano" id="genero"><a href="genres.html">Acción</a></li>
                     <li class="generoTamano"><a href="genres.html">Aventura</a></li>
                     <li class="generoTamano"><a href="genres.html">Ciencia Ficción</a></li>
                     <li class="corazon"><a href="favorite.html"><img src="./img/favorite.png"></a></li>
                 </ul>
             </nav>
 
-        </section>
-        
+        </section>      
+           
         <iframe width="560" height="315" src="https://www.youtube.com/embed/EVjvIL2joxQ?si=OyEG6Up1a9p9xO3M"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
