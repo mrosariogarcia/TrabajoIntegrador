@@ -94,3 +94,4 @@ botonFav.addEventListener("click",function(event){
         botonFav.src =  "../img/favorite.png"
     }
 })
+

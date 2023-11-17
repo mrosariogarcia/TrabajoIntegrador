@@ -58,11 +58,11 @@ fetch(urlDetallePelicula)
         <nav class="generosPelicula">
             <ul class="abajo" id="generos">
             </ul>
+            <button id="recomendaciones">Ver recomendaciones</button>
         </nav>`
+
         let listaGeneros = document.querySelector('#generos')
         for (let i=0; i < data.genres.length; i++){
-            console.log(listaGeneros)
-            console.log(data.genres[i])
             listaGeneros.innerHTML += `<li class="generoTamano"><a href="detailGenre.html?id=${data.genres[i].id}&name=${data.genres[i].name}">${data.genres[i].name}</a></li>`
         }
     })
@@ -71,16 +71,31 @@ fetch(urlDetallePelicula)
     })
 
 
-// //Fetch para los detalles de peliculas
-// fetch(urlRecomendations)
-//     .then(function(response){
-//         return response.json()
-//     })
-//     .then(function(data){
-//         //arrancamos con el codigo
-//         let peliculasRecomendadas = data.results;
-//         console.log(peliculasRecomendadas)
+//Fetch para los detalles de peliculas
+recomendacion.addEventListener("click", function(){
+    fetch(urlRecomendations)
+    .then(function(response){
+        return response.json()
+    })
+    .then(function(data){
+        //arrancamos con el codigo
+        let peliculasRecomendadas = data.results;
+        console.log(peliculasRecomendadas);
 
-        
+        let verRecomendaciones = document.querySelector('#verRecomendaciones');
+                
+        for (let i = 0; i < 5; i++){
+            verRecomendaciones.innerHTML += `<article id="claseArticle" class="contenedorPelis">
+            <img src="${peliculasRecomendadas[i].poster_path}">
+            <a href="detailMovie.html?id=${peliculasRecomendadas[i].id}">
+                <h5>${peliculasRecomendadas[i].title}</h5>
+            </a>
+            <h6>${peliculasRecomendadas[i].release_date}</h6>
+            </article>`
+        }
 
-//     })
+    })
+    .catch(function (error) {
+        console.log(error);
+    })
+})
