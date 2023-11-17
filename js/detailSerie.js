@@ -15,12 +15,13 @@ fetch(urlDetalleSerie)
         // busco los elementos que necesito en la api
 
         let fotoPortada = document.querySelector('#fotoPortada')
-        let tituloSerie = document.querySelector('.tituloSerie')
+        let tituloSerie = document.querySelector('#tituloSerie')
         let calificacion = document.querySelector('#calificacion')
         let fechaEstreno = document.querySelector('#fechaEstreno')
-        let duracion = document.querySelector('#duracion')
         let sinopsis = document.querySelector('#sinopsis')
         let genero = document.querySelector('#genero')
+
+        //Preparo la estructura
 
         console.log(data)
         // lo remplazo en el html
@@ -28,10 +29,10 @@ fetch(urlDetalleSerie)
         let foto = data.poster_path
         let imagen = `https://image.tmdb.org/t/p/w342/${foto}`
         fotoPortada.innerHTML = `<img src="${imagen}">`
-        titulo.innerHTML = `${data.title}`
-        fechaEstreno.innerHTML = `${data.release_date}`
+        tituloSerie.innerHTML = `${data.name}`
+        fechaEstreno.innerHTML = `${data.first_air_date}`
         sinopsis.innerHTML = `${data.overview}`
     })
     .catch(function(er){
-        confirm.log(er)
+        console.log(er)
     })
