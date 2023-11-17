@@ -5,6 +5,7 @@ let qsOBJ = new URLSearchParams(qs);
 let idSerie = qsOBJ.get("id")
 
 let urlDetalleSerie = `https://api.themoviedb.org/3/tv/${idSerie}?api_key=${apiK}`
+let urlRecomendationsS = `https://api.themoviedb.org/3/tv/${idSerie}/recommendations?api_key=${apiK}`
 
 console.log(urlDetalleSerie)
 
@@ -57,9 +58,13 @@ fetch(urlDetalleSerie)
         </div>
 
         <nav class="generosPelicula">
-            <ul class="abajo" id="generos">
-            <li class="corazon"><a href="favorite.html"><img class="botonFav" src="./img/favorite.png"></a></li>
-            </ul>
+        <div>
+        <ul class="abajo" id="generos"></ul>
+        </div>
+        <div>
+        <h4 class="recomendaciones">Ver recomendaciones</h4>
+        <section id="verRecomendaciones" class="contenedorPelisDetalles"></section>
+        </div>
         </nav>`
 
         let listaGenerosS = document.querySelector('#generos')
@@ -75,23 +80,30 @@ fetch(urlDetalleSerie)
     })
 
 
-// FAVORITOS
+//RECOMENDACIONES SERIES
 
-let favoritosS = [] // donde se colectan los favoritos
-let botonFav = document.querySelector(".botonFav")
+fetch(urlRecomendationsS)
+.then(function(response){
+    return response.json()
+})
+.then(function(data){
+    let seriesRecomendadas = data.results
+    console.log(seriesRecomendadas);
 
-botonFav.addEventListener("click",function(event){
-
-    console.log(this)
-    event.preventDefault()
-
-    if (this.src == "../img/favorite.png"){
-        favoritosS.push(idSerie)
-        botonFav.src = "../img/unfavorite.png"
-    }
-
-    else{
-        botonFav.src =  "../img/favorite.png"
+    let verSeriesR = document.querySelector("#verRecomendaciones")
+    
+    for (let i = 0; i < 3; i++){
+        verSeriesR.innerHTML +=
+        `<article id="claseArticle">
+            <img src="https://image.tmdb.org/t/p/w342${seriesRecomendadas[i].poster_path}">
+            <a href="detailMovie.html?id=${seriesRecomendadas[i].id}">
+                <h5>${seriesRecomendadas[i].original_name}</h5>
+            </a>
+            <h6>${seriesRecomendadas[i].first_air_date}</h6>
+            </article>`
     }
 })
 
+.catch(function (error) {
+    console.log(error);
+})
