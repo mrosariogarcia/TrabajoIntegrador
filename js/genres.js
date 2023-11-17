@@ -19,7 +19,7 @@ fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiK}`)
     let generosAPI = ""
 
     for (let i=0; i<listaP.length; i++){
-        generosAPI += `<li><a href="detailGenres.html?id=${listaP[i].id}"> ${listaP[i].name} </a></li>`
+        generosAPI += `<li><a href="detailGenres.html?id=${listaP[i].id}&nombre=${listaP[i].name}"> ${listaP[i].name} </a></li>`
     }
 
     pelisG.innerHTML = generosAPI
@@ -46,7 +46,7 @@ fetch(`https://api.themoviedb.org/3/genre/tv/list?api_key=${apiK}`)
     let generosAPIS = ""
 
     for (let i=0; i<listaS.length; i++){
-        generosAPIS += `<li><a href="detailGenres.html?id=${listaS[i].id}"> ${listaS[i].name} </a></li>`
+        generosAPIS += `<li><a href="detailGenres.html?id=${listaS[i].id}&nombre=${listaS[i].name}"> ${listaS[i].name} </a></li>`
     }
 
     seriesG.innerHTML = generosAPIS

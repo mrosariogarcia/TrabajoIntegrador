@@ -1,8 +1,15 @@
 let apiK = "5990392eb4d2b299d1f882dd6addfeae"
 
 let res = location.search;
+console.log(res)
 let resOBJ = new URLSearchParams(res);
 let idG = resOBJ.get("id")
+console.log(idG)
+
+let nombreGenero = resOBJ.get("nombre")
+
+let span = document.querySelector('#generoAMostrar')
+span.innerHTML = nombreGenero
 
 let generoSel = document.querySelector(".tituloG")
 
