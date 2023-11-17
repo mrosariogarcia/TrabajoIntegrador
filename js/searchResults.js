@@ -94,13 +94,13 @@ fetch(busquedaSeries)
             
             //titulo de serie
             
-            let titulo = arrayInfo[i].title
+            let titulo = arrayInfo[i].name
             
             //id de serie
             let id = arrayInfo[i].id
 
             //release date de serie
-            let releaseDate = arrayInfo[i].release_date
+            let releaseDate = arrayInfo[i].first_air_date
 
             //creamos una variable 'devolucion' para guardar todas las opciones de series y luego, poder mostrarlas en el html
 
