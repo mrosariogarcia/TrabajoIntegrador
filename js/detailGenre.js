@@ -11,6 +11,11 @@ console.log(nombreGenero)
 let span = document.querySelector('#generoAMostrar')
 span.innerHTML = nombreGenero
 
+let nombreGeneros = resOBJ.get("name")
+console.log(nombreGeneros)
+let spans = document.querySelector('#generoAMostrar')
+spans.innerHTML = nombreGeneros
+
 let generoSel = document.querySelector(".tituloG")
 
 let generoSelP = document.querySelector(".tituloG_series")
