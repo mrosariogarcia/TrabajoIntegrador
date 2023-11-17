@@ -24,7 +24,7 @@ fetch(busquedaMovies)
     .then(function(data){
         let arrayInfo = data.results
    
-        let devolucion;
+        let devolucion= "";
         const pelisEncontradas = document.querySelector(".res_busqueda")
         for (let i=0; i < arrayInfo.length; i++){
             console.log(arrayInfo[i])

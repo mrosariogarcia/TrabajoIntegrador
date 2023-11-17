@@ -7,7 +7,7 @@ let idG = resOBJ.get("id")
 console.log(idG)
 
 let nombreGenero = resOBJ.get("nombre")
-
+console.log(nombreGenero)
 let span = document.querySelector('#generoAMostrar')
 span.innerHTML = nombreGenero
 
