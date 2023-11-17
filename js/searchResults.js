@@ -13,7 +13,6 @@ let busquedaSeries = `https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&
 let palabraBuscada = document.querySelector("#palabraBuscada");
     palabraBuscada.innerText = buscado;
     
-
 /* Fetch para la busqueda de peliculas */
 fetch(busquedaMovies)
 
