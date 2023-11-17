@@ -56,12 +56,14 @@ fetch(urlDetallePelicula)
         </div>
 
         <nav class="generosPelicula">
-            <ul class="abajo" id="generos">
-            </ul>
-            <button id="recomendaciones" type="submit">Ver recomendaciones</button>
-        </nav>
-        <div id="recomendaciones">
-        </div>`
+            <div>
+            <ul class="abajo" id="generos"></ul>
+            </div>
+            <div>
+            <h4 class="recomendaciones">Ver recomendaciones</h4>
+            <section id="verRecomendaciones" class="contenedorPelisDetalles"></section>
+            </div>
+        </nav>`
 
         let listaGeneros = document.querySelector('#generos')
         for (let i=0; i < data.genres.length; i++){
@@ -74,8 +76,7 @@ fetch(urlDetallePelicula)
 
 
 //Fetch para los detalles de peliculas
-recomendacion.addEventListener("click", function(){
-    fetch(urlRecomendations)
+fetch(urlRecomendations)
     .then(function(response){
         return response.json()
     })
@@ -86,18 +87,19 @@ recomendacion.addEventListener("click", function(){
 
         let verRecomendaciones = document.querySelector('#verRecomendaciones');
                 
-        for (let i = 0; i < 5; i++){
-            verRecomendaciones.innerHTML += `<article id="claseArticle" class="contenedorPelis">
-            <img src="${peliculasRecomendadas[i].poster_path}">
+        for (let i = 0; i < 3; i++){
+            verRecomendaciones.innerHTML += `
+            <article id="claseArticle">
+            <img src="https://image.tmdb.org/t/p/w342${peliculasRecomendadas[i].poster_path}">
             <a href="detailMovie.html?id=${peliculasRecomendadas[i].id}">
                 <h5>${peliculasRecomendadas[i].title}</h5>
             </a>
             <h6>${peliculasRecomendadas[i].release_date}</h6>
             </article>`
         }
+        console.log(verRecomendaciones)
 
     })
     .catch(function (error) {
         console.log(error);
     })
-})
