@@ -16,7 +16,8 @@ fetch(urlDetallePelicula)
     })
     .then(function(data){
         
-        console.log(data.genres)
+        console.log(data.genres);
+        console.log(data)
         
         let contenedorDetallePeli = document.querySelector('#contenedorDetallePelicula');
         
@@ -53,6 +54,7 @@ fetch(urlDetallePelicula)
                     <p class="p1 p2">${data.runtime}</p>
                 </div>
             </div>
+
         </div>
 
         <nav class="generosPelicula">
@@ -103,3 +105,10 @@ fetch(urlRecomendations)
     .catch(function (error) {
         console.log(error);
     })
+// trailer
+let urlTrailer = "https://www.youtube.com/embed/"
+fetch(urlTrailer)
+    .then(function(response){
+        return response.json()
+    })
+    .then()
