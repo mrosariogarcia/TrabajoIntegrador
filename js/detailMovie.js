@@ -13,6 +13,19 @@ fetch(urlDetallePelicula)
         return response.json()
     })
     .then(function(data){
+<<<<<<< HEAD
+=======
+        // ahora si hacemos codigo
+        // busco los elementos que necesito en la api
+
+        let fotoPortada = document.querySelector('#fotoPortada')
+        let titulo = document.querySelector('.tituloFilm')
+        let calificacion = document.querySelector('#calificacion')
+        let fechaEstreno = document.querySelector('#fechaEstreno')
+        let sinopsis = document.querySelector('#sinopsis')
+        let genero = document.querySelector('#genero')
+
+>>>>>>> 76ee820831532ae3ee857d211f67581c59c6ff93
         console.log(data)
         
         let fotoPortada = document.querySelector('#portadaPelicula');

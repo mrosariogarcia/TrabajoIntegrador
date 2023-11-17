@@ -277,21 +277,10 @@ p{
     background-color: rgb(32,50,103);
 }
 
-.topImage {
-    max-width: 100%;
-    max-height: fit-content;
-}
-
 .sectionFilm{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-top: 20px;
-}
-
-.portadaFilm{
-    width: 200px;
-    background-color: #F7D69D;
     margin-top: 20px;
 }
 
