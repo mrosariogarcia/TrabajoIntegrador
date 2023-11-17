@@ -57,6 +57,8 @@ fetch(urlDetallePelicula)
                 </div>
             </div>
 
+            <div id="videoTrailer"></div>
+
         </div>
 
         <nav class="generosPelicula">
@@ -107,10 +109,21 @@ fetch(urlRecomendations)
     .catch(function (error) {
         console.log(error);
     })
+
 // trailer
-let urlTrailer = "https://www.youtube.com/embed/"
+let urlTrailer = urlTrailer = `https://api.themoviedb.org/3/movie/${idPelicula}/videos?api_key=f216cd46b728d209895b1387e51e9182&language=en-US`
 fetch(urlTrailer)
     .then(function(response){
         return response.json()
     })
-    .then()
+    .then(function(data){
+        trailerP = data.results
+        console.log(trailerP)
+
+        let trailerV = document.querySelector("#videoTrailer")
+        
+        if (trailerP.video == null){
+            trailerV.innerHTML = `<p>"No encontramos ningun trailer"</p>`
+        }
+        for (let i=0; i<)
+    })
