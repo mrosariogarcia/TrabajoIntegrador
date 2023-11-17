@@ -190,7 +190,9 @@ h6{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     background-color: rgb(66,63,114);
-    
+    color: white;
+    font-size: small;
+    justify-content: space-around;
 }
 
 #claseArticle {
@@ -417,6 +419,9 @@ p{
     width: 100%;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
 .generoTamano {

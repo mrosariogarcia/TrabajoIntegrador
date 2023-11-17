@@ -58,8 +58,10 @@ fetch(urlDetallePelicula)
         <nav class="generosPelicula">
             <ul class="abajo" id="generos">
             </ul>
-            <button id="recomendaciones">Ver recomendaciones</button>
-        </nav>`
+            <button id="recomendaciones" type="submit">Ver recomendaciones</button>
+        </nav>
+        <div id="recomendaciones">
+        </div>`
 
         let listaGeneros = document.querySelector('#generos')
         for (let i=0; i < data.genres.length; i++){
