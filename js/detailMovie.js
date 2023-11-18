@@ -20,7 +20,6 @@ fetch(urlDetallePelicula)
         
         let contenedorDetallePeli = document.querySelector('#contenedorDetallePelicula');
         
-
         // for (let i = 0; i < data.genres.length; i++){
         //     generos.innerHTML += `<li class="generoTamano"><a href="detailGenre.html?id=${data.genres[i].id}&name=${data.genres[i].name}">${data.genres[i].name}</a></li>`
         // }
