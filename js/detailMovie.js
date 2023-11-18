@@ -68,11 +68,7 @@ fetch(urlDetallePelicula)
             </div>
         </nav>`
 
-        // <div class="foto_trailer">
-        //                             <img src="${urlImagen + data.poster_path}" width="300px" height ='520px'>
-        //                             <div class = "Trailer"></div>
-        //                             <div class="otrosVideos"><p>Todos los videos y trailers</p></div>
-
+        
         let listaGeneros = document.querySelector('#generos')
         for (let i=0; i < data.genres.length; i++){
             listaGeneros.innerHTML += `<li class="generoTamano"><a href="detailGenres.html?id=${data.genres[i].id}&name=${data.genres[i].name}">${data.genres[i].name}</a></li>`
@@ -84,33 +80,49 @@ fetch(urlDetallePelicula)
 
 
 //Fetch para los detalles de peliculas
-fetch(urlRecomendations)
-    .then(function(response){
-        return response.json()
-    })
-    .then(function(data){
-        //arrancamos con el codigo
-        let peliculasRecomendadas = data.results;
-        console.log(peliculasRecomendadas);
+let verifico = false;
+let verRecomendaciones = document.querySelector('#verRecomendaciones');
 
-        let verRecomendaciones = document.querySelector('#verRecomendaciones');
-                
-        for (let i = 0; i < 3; i++){
-            verRecomendaciones.innerHTML += `
-            <article id="claseArticle">
-            <img src="https://image.tmdb.org/t/p/w342${peliculasRecomendadas[i].poster_path}">
-            <a href="detailMovie.html?id=${peliculasRecomendadas[i].id}">
-                <h5>${peliculasRecomendadas[i].title}</h5>
-            </a>
-            <h6>${peliculasRecomendadas[i].release_date}</h6>
-            </article>`
-        }
-        console.log(verRecomendaciones)
+verRecomendaciones.addEventListener("click", function(){
+    if (verifico) {
+        verRecomendaciones.innerHTML = "";
+        verifico = false;
+    }
+    else {
+        fetch(urlRecomendations)
+            .then(function(response){
+                return response.json()
+            })
+            .then(function(data){
+                //arrancamos con el codigo
+                let peliculasRecomendadas = data.results;
+                console.log(peliculasRecomendadas);
 
-    })
-    .catch(function (error) {
-        console.log(error);
-    })
+                // verRecomendaciones = document.querySelector('#verRecomendaciones');
+                if (peliculasRecomendadas.length !== 0) {
+                    
+                }
+                for (let i = 0; i < 3; i++){
+                    verRecomendaciones.innerHTML += `
+                    <article id="claseArticle">
+                    <img src="https://image.tmdb.org/t/p/w342${peliculasRecomendadas[i].poster_path}">
+                    <a href="detailMovie.html?id=${peliculasRecomendadas[i].id}">
+                        <h5>${peliculasRecomendadas[i].title}</h5>
+                    </a>
+                    <h6>${peliculasRecomendadas[i].release_date}</h6>
+                    </article>`
+                }
+                console.log(verRecomendaciones)
+
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+            verifico = true;
+    }
+    
+})
+
 
 // trailer
 let urlTrailer = `https://api.themoviedb.org/3/movie/${idPelicula}/videos?api_key=f216cd46b728d209895b1387e51e9182&language=en-US`
